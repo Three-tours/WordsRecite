@@ -30,12 +30,17 @@ public class Receiver extends Thread{
 	public void process(){
 		try {
 			int type = dis.readInt();
+			//如果是开始包，得到题目标号
 			if(type == Config.TYPE_START){
 				int[] numbers = new int[10];
 				for(int i = 0;i< 10;i++){
 					numbers[i] = dis.readInt();
 				}
+				
+			}else if(type == Config.TYPE_SCORE){
+				
 			}
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
