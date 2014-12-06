@@ -16,11 +16,11 @@ public class StartActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
 			
 			public void run() {
-				Intent intent = new Intent(StartActivity.this,FightActivity.class);
+				Intent intent = new Intent(StartActivity.this,SecondActivity.class);
 				startActivity(intent);
 				StartActivity.this.finish();
 			}
-		}, 500);
+		}, 1000);
     }
 
 
