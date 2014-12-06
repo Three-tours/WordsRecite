@@ -32,13 +32,17 @@ public class Receiver extends Thread{
 			int type = dis.readInt();
 			//如果是开始包，得到题目标号
 			if(type == Config.TYPE_START){
-				int[] numbers = new int[10];
-				for(int i = 0;i< 10;i++){
-					numbers[i] = dis.readInt();
+				int number = dis.readInt();
+				
+			}
+			//如果是输赢包，根据输赢执行操作
+			else if(type == Config.TYPE_WINORLOSE){
+				int winorlose = dis.readInt();
+				if(winorlose == Config.WIN){
+					
+				}else if(winorlose == Config.LOSE){
+					
 				}
-				
-			}else if(type == Config.TYPE_SCORE){
-				
 			}
 			
 		} catch (IOException e) {
