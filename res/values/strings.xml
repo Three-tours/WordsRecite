@@ -3,7 +3,33 @@
 
     <string name="app_name">背单词</string>
     <string name="action_settings">Settings</string>
+    
+    <string name="StudyBegin">开始学习</string>
+    <string name="Title">天天背单词</string>
+    <string name="WordsStudy">单词学习</string>
+    <string name="tip">我的签名：</string>
+    <string name="dailyDuty">今日任务:</string>
+    <string name="Signature">背词不易，且行且珍惜~</string>
+    <string name="wordsSum">单词总数</string>
+    <string name="newWords">新词</string>
+    <string name="review">复习</string>
+    <string name="wordsNum">17</string>
+    <string name="newWordsNum">11</string>
+    <string name="reviewNum">6</string>
+    <string name="NewWordsPace">新词进度</string>
+    <string name="ReviewPace">复习进度</string>
+    <string name="newPercent">0%</string>
+    <string name="reviewPercent">0%</string>
+    
+    <string name="testPhonetics">[\'kæptʃə(r)]</string>
+    <string name="test">capture</string>
+    <string name="explaination">v.捕获，俘获；夺取，占领</string>
+    <string name="sentence">The whole town celebrated when two tanks were captured.</string>
+    <string name="senExp">全体居民庆祝缴获了两辆坦克。</string>
+    
+    <string name="title_activity_third">ThirdActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_fight">FightActivity</string>
 
 </resources>
