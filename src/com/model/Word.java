@@ -6,10 +6,10 @@ package com.model;
  */
 public class Word {
 	
-	private String english="";//英文
-	private String chinese="";//中文
-	private String sentence="";//例句
-	private String soundmark="";//音标
+	public String english="";//英文
+	public String chinese="";//中文
+	public String sentence="";//例句
+	public String soundmark="";//音标
 	
 	
 	//构造函数

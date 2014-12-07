@@ -3,5 +3,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FightActivity" >
+
+    <TextView
+        android:id="@+id/fight_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fightActionBar_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#58a5ff"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="对战答题"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:id="@+id/fight_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fight_actionbar" >
+
+    <Button
+        android:id="@+id/button_a"
+        android:layout_width="@dimen/fight_btn_width"
+        android:layout_height="@dimen/fight_btn_height"
+        android:layout_below="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_fight_choice_default"
+        android:onClick="select"
+        android:text="Button"
+        android:textColor="#ffffff" />
+
+  <Button
+      android:id="@+id/button_b"
+      android:layout_width="@dimen/fight_btn_width"
+      android:layout_height="@dimen/fight_btn_height"
+      android:layout_alignLeft="@+id/button_a"
+      android:layout_below="@+id/button_a"
+      android:layout_marginTop="25dp"
+      android:background="@drawable/bg_fight_choice_default"
+      android:onClick="select"
+      android:textColor="#ffffff"
+      
+      android:text="Button" />
+
+    <Button
+        android:id="@+id/button_c"
+        android:layout_width="@dimen/fight_btn_width"
+        android:layout_height="@dimen/fight_btn_height"
+        android:layout_alignLeft="@+id/button_b"
+        android:layout_below="@+id/button_b"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_fight_choice_default"
+        android:onClick="select"
+        android:textColor="#ffffff"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button_d"
+        android:layout_width="@dimen/fight_btn_width"
+        android:layout_height="@dimen/fight_btn_height"
+        android:layout_alignLeft="@+id/button_c"
+        android:layout_below="@+id/button_c"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_fight_choice_default"
+        android:onClick="select"
+        android:textColor="#ffffff"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/countDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="24dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/countDown"
+        android:layout_alignBottom="@+id/countDown"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="26dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countDown"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+    </RelativeLayout>
     
 </RelativeLayout>
