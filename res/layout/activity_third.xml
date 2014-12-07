@@ -86,25 +86,24 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/explaination"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_centerVertical="true"
-            android:text="@string/explaination"/>
+            android:text="@string/explaination" />
 
         <ImageView
             android:id="@+id/rubbish"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:src="@drawable/rubbish"
-            android:layout_alignParentRight="true" />
-        
+            android:src="@drawable/rubbish" />
     </RelativeLayout>
 
     <TextView
@@ -115,7 +114,7 @@
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="5dp"
         android:text="@string/sentence" />
-    
+
     <TextView
         android:id="@+id/senExp"
         android:layout_width="fill_parent"
@@ -124,5 +123,21 @@
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="@string/senExp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/leftPg"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5" />
+
+        <TextView
+            android:id="@+id/rightPg"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5" />
+    </LinearLayout>
 
 </LinearLayout>

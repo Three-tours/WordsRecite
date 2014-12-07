@@ -14,5 +14,6 @@
     <dimen name="fightActionBar_height">45dp</dimen>
     <dimen name="fight_btn_height">35dp</dimen>
     <dimen name="fight_btn_width">200dp</dimen>
+    <dimen name="top">100dp</dimen>
 
 </resources>
