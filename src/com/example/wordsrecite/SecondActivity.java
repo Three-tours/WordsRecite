@@ -51,7 +51,7 @@ public class SecondActivity extends Activity {
 					try {
 
 						Socket s;
-						s = new Socket("192.168.137.138", 7777);
+						s = new Socket("115.29.107.232", 7777);
 
 						output = new DataOutputStream(s.getOutputStream());
 						input = new DataInputStream(s.getInputStream());

@@ -50,7 +50,7 @@ public class FightActivity extends Activity {
 		changeQuestion(index, wl);
 		changeTime(time);
 		changeScore(score);
-		timer.schedule(tm, 1000, 1000);
+		timer.schedule(tm, 1000, 500);
 
 		new Thread(new Runnable() {
 
@@ -162,7 +162,7 @@ public class FightActivity extends Activity {
 					changeTime(time);
 					if (time == 0) {
 						index++;
-						if (index == 2) {
+						if (index == 10) {
 							changeTime(0);
 							timer.cancel();
 							deathFlag = true;
