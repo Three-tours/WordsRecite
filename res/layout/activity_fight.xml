@@ -22,9 +22,7 @@
         android:id="@+id/fight_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_below="@+id/fight_actionbar" >
 
     <Button
@@ -104,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/countDown"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="64dp"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
         

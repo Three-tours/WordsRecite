@@ -50,7 +50,7 @@ public class FightActivity extends Activity {
 		changeQuestion(index, wl);
 		changeTime(time);
 		changeScore(score);
-		timer.schedule(tm, 1000, 1000);
+		timer.schedule(tm, 1000, 500);
 
 		new Thread(new Runnable() {
 

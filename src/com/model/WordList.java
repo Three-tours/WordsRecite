@@ -5,7 +5,7 @@ package com.model;
 /**
  * 单词列表类:每组count个
  * @author pc
- *
+ * 
  */
 public class WordList {
 	private int count = 10;//单词个数
