@@ -67,10 +67,10 @@ public class FightActivity extends Activity {
 						int type= SecondActivity.input.readInt();
 						
 						if (type == Config.WIN) {
-							Intent intent = new Intent(FightActivity.this,SecondActivity.class);
+							Intent intent = new Intent(FightActivity.this,WinActivity.class);
 							startActivity(intent);
 						} else if(type == Config.LOSE){
-							Intent intent = new Intent(FightActivity.this,ThirdActivity.class);
+							Intent intent = new Intent(FightActivity.this,LoseActivity.class);
 							startActivity(intent);
 						}
 					}
