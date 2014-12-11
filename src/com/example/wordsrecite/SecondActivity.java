@@ -34,16 +34,11 @@ public class SecondActivity extends Activity {
 		StudyBeginbtn.setOnClickListener(new WordsReciteListener());
 	}
 
-	// 第二个布局StudyBeginbtn按钮的监听器
-	private class WordsReciteListener implements OnClickListener {
-		@Override
-		public void onClick(View v) {
-			// 加载第二个布局文件
-			// setContentView(R.layout.activity_third);
-			//
-			// back = (ImageButton) findViewById(R.id.back);
-			// back.setOnClickListener(new BackListener());
+	private class StudyBeginListener implements OnClickListener{
 
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
 			new Thread(new Runnable() {
 
 				public void run() {
@@ -75,6 +70,20 @@ public class SecondActivity extends Activity {
 				}
 			}).start();
 
+		}
+		
+	}
+	// 第二个布局StudyBeginbtn按钮的监听器
+	private class WordsReciteListener implements OnClickListener {
+		@Override
+		public void onClick(View v) {
+			// 加载第二个布局文件
+			 setContentView(R.layout.activity_third);
+			
+//			 back = (ImageButton) findViewById(R.id.back);
+//			 back.setOnClickListener(new BackListener());
+
+			
 		}
 	}
 

@@ -39,6 +39,14 @@
             android:name="com.example.wordsrecite.ThirdActivity"
             android:label="@string/title_activity_third" >
         </activity>
+        <activity
+            android:name="com.example.wordsrecite.WinActivity"
+            android:label="@string/title_activity_win" >
+        </activity>
+        <activity
+            android:name="com.example.wordsrecite.LoseActivity"
+            android:label="@string/title_activity_lose" >
+        </activity>
     </application>
 
 </manifest>
