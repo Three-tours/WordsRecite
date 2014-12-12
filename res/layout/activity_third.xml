@@ -67,13 +67,7 @@
                 android:textSize="20dp" />
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/horizontal_margin"
-            android:src="@drawable/horn" />
+     
     </RelativeLayout>
 
     <View
@@ -129,18 +123,35 @@
         android:layout_height="fill_parent"
         android:orientation="horizontal" >
 
-        <TextView
+        <RelativeLayout
             android:id="@+id/leftPg"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5" />
-
-        <TextView
-            android:id="@+id/rightPg"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
             android:onClick="select" />
+
+        <RelativeLayout
+            android:id="@+id/rightPg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:onClick="select" >
+
+            <Button
+                android:id="@+id/thirdactivity_fightstart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="17dp"
+                android:layout_marginRight="16dp"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:background="@drawable/bg_fight_choice"
+                android:visibility="gone"
+                android:text="对战开始" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 

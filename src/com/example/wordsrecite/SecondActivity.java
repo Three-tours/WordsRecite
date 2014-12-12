@@ -21,8 +21,6 @@ public class SecondActivity extends Activity {
 	Button StudyBeginbtn;
 	ImageButton back;
 
-	static DataOutputStream output;
-	static DataInputStream input;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,56 +32,16 @@ public class SecondActivity extends Activity {
 		StudyBeginbtn.setOnClickListener(new WordsReciteListener());
 	}
 
-	private class StudyBeginListener implements OnClickListener{
 
-		@Override
-		public void onClick(View arg0) {
-			// TODO Auto-generated method stub
-			new Thread(new Runnable() {
-
-				public void run() {
-
-					try {
-
-						Socket s;
-						s = new Socket("115.29.107.232", 7777);
-
-						output = new DataOutputStream(s.getOutputStream());
-						input = new DataInputStream(s.getInputStream());
-
-
-						if (input.readInt() == Config.TYPE_START) {
-							int level = input.readInt();
-							Intent intent = new Intent(SecondActivity.this,
-									FightActivity.class);
-							startActivity(intent);
-							SecondActivity.this.finish();
-						}
-					} catch (UnknownHostException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-
-				}
-			}).start();
-
-		}
-		
-	}
 	// 第二个布局StudyBeginbtn按钮的监听器
 	private class WordsReciteListener implements OnClickListener {
 		@Override
 		public void onClick(View v) {
-			// 加载第二个布局文件
-			 setContentView(R.layout.activity_third);
 			
-//			 back = (ImageButton) findViewById(R.id.back);
-//			 back.setOnClickListener(new BackListener());
-
-			
+			Intent intent = new Intent(SecondActivity.this,ThirdActivity.class);
+			startActivity(intent);
+			SecondActivity.this.finish();
+		
 		}
 	}
 

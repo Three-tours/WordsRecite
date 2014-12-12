@@ -60,11 +60,11 @@ public class FightActivity extends Activity {
 					Thread.sleep(300);
 				}
 				
-					SecondActivity.output.writeInt(Config.TYPE_SCORE);
-					SecondActivity.output.writeInt(score);
+					ThirdActivity.output.writeInt(Config.TYPE_SCORE);
+					ThirdActivity.output.writeInt(score);
 
-					if ( SecondActivity.input.readInt()==Config.TYPE_WINORLOSE) {
-						int type= SecondActivity.input.readInt();
+					if ( ThirdActivity.input.readInt()==Config.TYPE_WINORLOSE) {
+						int type= ThirdActivity.input.readInt();
 						
 						if (type == Config.WIN) {
 							Intent intent = new Intent(FightActivity.this,WinActivity.class);

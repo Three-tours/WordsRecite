@@ -1,13 +1,21 @@
 package com.example.wordsrecite;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.message.Config;
 import com.model.WordList;
 
 public class ThirdActivity extends Activity {
@@ -16,9 +24,14 @@ public class ThirdActivity extends Activity {
 	private TextView words;
 	private TextView explaination;
 	private int index = 0;
-	public Handler handler;
+	private Button fight;
+	private ProgressDialog  progressDialog;
+	
 
-	@Override
+	static DataOutputStream output;
+	static DataInputStream input;
+
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_third);
@@ -26,33 +39,26 @@ public class ThirdActivity extends Activity {
 		// 得到各种组件
 		words = (TextView) this.findViewById(R.id.words);
 		explaination = (TextView) this.findViewById(R.id.explaination);
-
+		fight = (Button) this.findViewById(R.id.thirdactivity_fightstart);
+		fight.setOnClickListener(new FightBeginListener());
 		wl = new FightActivity().getWordlist(1);
 
-		handler = new Handler(callback);
-
-		words.setText("aaaaa");
-		explaination.setText("啊啊啊啊啊啊");
 		// 设置初始内容
-		//this.changeWord(index);
+		this.changeWord(index);
 
 		
 	}
 
 	// 通过单词改变界面的方法
 	private void changeWord(int index) {
-		Message msg = new Message();
-		msg.arg1 = 1;
-		msg.arg2 = index;
-		handler.sendMessage(msg);
-
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.third, menu);
-		return true;
+		words.setText(wl.words[index].english);
+		explaination.setText(wl.words[index].chinese);
+		
+		if(index==9){
+			fight.setVisibility(View.VISIBLE);
+		}else{
+			fight.setVisibility(View.GONE);
+		}
 	}
 
 	public void select(View view) {
@@ -73,17 +79,44 @@ public class ThirdActivity extends Activity {
 		this.changeWord(index);
 	}
 
-	Handler.Callback callback = new Handler.Callback() {
+	private class FightBeginListener implements OnClickListener{
 
-		@Override
-		public boolean handleMessage(Message msg) {
-			if (msg.arg1 == 1) {
-				words.setText(wl.words[msg.arg2].english);
-				explaination.setText(wl.words[msg.arg2].chinese);
-			}
-			return true;
+		public void onClick(View arg0) {
+			progressDialog = ProgressDialog.show(ThirdActivity.this, "正在匹配", "请您稍等 ..." ,true, false);
+			new Thread(new Runnable() {
+
+				public void run() {
+
+					try {
+
+						Socket s;
+						s = new Socket("115.29.107.232", 7777);
+
+						output = new DataOutputStream(s.getOutputStream());
+						input = new DataInputStream(s.getInputStream());
+						
+						
+						if (input.readInt() == Config.TYPE_START) {
+							int level = input.readInt();
+							progressDialog.dismiss();
+							Intent intent = new Intent(ThirdActivity.this,
+									FightActivity.class);
+							startActivity(intent);
+							ThirdActivity.this.finish();
+						}
+					} catch (UnknownHostException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+				}
+			}).start();
+
 		}
-
-	};
-
+		
+	}
+	
 }
