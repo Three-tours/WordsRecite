@@ -1,7 +1,7 @@
 package com.example.wordsrecite;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.app.Activity;
 import android.view.Menu;
 
 public class ThirdActivity extends Activity {

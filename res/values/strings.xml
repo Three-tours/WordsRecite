@@ -19,6 +19,10 @@
     <string name="ReviewPace">复习进度</string>
     <string name="newPercent">0%</string>
     <string name="reviewPercent">0%</string>
+    <string name="insert">插入</string>
+    <string name="back2">返回</string>
+    <string name="search">查询</string>
+    <string name="detail">解释</string>
     <string name="testPhonetics">[\'kæptʃə(r)]</string>
     <string name="test">capture</string>
     <string name="explaination">v.捕获，俘获；夺取，占领</string>
@@ -32,5 +36,10 @@
     <string name="title_activity_fight">FightActivity</string>
     <string name="title_activity_win">WinActivity</string>
     <string name="title_activity_lose">LoseActivity</string>
+    <string name="title_activity_sava">SavaActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_my_database_helper">MyDatabaseHelper</string>
+    <string name="title_activity_dict">Dict</string>
 
 </resources>
