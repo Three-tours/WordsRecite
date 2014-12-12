@@ -70,7 +70,7 @@
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_marginBottom="@dimen/size"
-        android:background="#EAEAAE"
+        android:background="@drawable/bg_second_duty"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -143,7 +143,7 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:background="#EAEAAE"
+        android:background="@drawable/bg_second_duty"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -227,7 +227,7 @@
             android:layout_width="@dimen/studybegin_height"
             android:layout_height="fill_parent"
             android:background="@drawable/camera" />
-
+        
         <Button
             android:id="@+id/StudyBegin"
             android:layout_width="150dp"
@@ -239,9 +239,9 @@
 
         <ImageButton
             android:id="@+id/microphone"
-            android:layout_width="35dp"
+            android:layout_width="50dp"
             android:layout_height="fill_parent"
-            android:background="@drawable/microphone" />
+            android:background="@drawable/search" />
     </LinearLayout>
 
 </LinearLayout>

@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.message.Config;
 import com.model.WordList;
 
+
 public class ThirdActivity extends Activity {
 
 	private WordList wl;

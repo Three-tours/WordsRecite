@@ -47,6 +47,19 @@
             android:name="com.example.wordsrecite.LoseActivity"
             android:label="@string/title_activity_lose" >
         </activity>
+
+        <activity
+            android:name="com.example.wordsrecite.ResultActivity"
+            android:label="@string/title_activity_result" >
+        </activity>
+        <activity
+            android:name="com.example.wordsrecite.MyDatabaseHelper"
+            android:label="@string/title_activity_my_database_helper" >
+        </activity>
+        <activity
+            android:name="com.example.wordsrecite.Main"
+            android:label="@string/title_activity_dict" >
+        </activity>
     </application>
 
 </manifest>
