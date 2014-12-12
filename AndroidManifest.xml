@@ -47,6 +47,7 @@
             android:name="com.example.wordsrecite.LoseActivity"
             android:label="@string/title_activity_lose" >
         </activity>
+        
     </application>
 
 </manifest>
