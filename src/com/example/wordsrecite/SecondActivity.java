@@ -22,12 +22,16 @@ public class SecondActivity extends Activity {
 	ImageButton Addbtn;
 	ImageButton Searchbtn;
 	Button back2;
-
+	static MyDatabaseHelper dbHelper;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
+		
+		
+		dbHelper = new MyDatabaseHelper(this 
+				, "myDict.db3" , 1);
 
 		StudyBeginbtn = (Button) findViewById(R.id.StudyBegin);
 		Addbtn = (ImageButton) findViewById(R.id.camera);

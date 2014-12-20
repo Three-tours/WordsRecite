@@ -47,8 +47,7 @@ public class InsertWordActivity extends Activity
 		
 		// 创建MyDatabaseHelper对象，指定数据库版本为1，此处使用相对路径即可，
 		// 数据库文件自动会保存在程序的数据文件夹的databases目录下。
-		dbHelper = new MyDatabaseHelper(this 
-			, "myDict.db3" , 1);
+		dbHelper = SecondActivity.dbHelper;
 		insert = (Button)findViewById(R.id.insert);
 		search = (Button)findViewById(R.id.search);	
 		insert.setOnClickListener(new OnClickListener()
@@ -73,7 +72,6 @@ public class InsertWordActivity extends Activity
 				imageView.setImageResource(R.drawable.v);
 				LinearLayout toastView = (LinearLayout)toast.getView();
 				toastView.setOrientation(LinearLayout.HORIZONTAL);
-				toastView.addView(imageView,0);
 				toast.show();
 			}			
 		});	
@@ -130,7 +128,7 @@ public class InsertWordActivity extends Activity
 	}
 	
 	
-	private void insertData(SQLiteDatabase db
+	public static void insertData(SQLiteDatabase db
 		, String word , String detail)
 	{
 		//执行插入语句

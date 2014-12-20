@@ -5,10 +5,21 @@
     android:gravity="center"
     android:orientation="vertical" >
 
-    <ImageView
+     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/line" />
+        android:layout_height="50dp"
+        android:orientation="horizontal" 
+        android:background="@color/titlegreen">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="查询结果"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+            
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/show"

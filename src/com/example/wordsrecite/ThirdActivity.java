@@ -15,6 +15,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.message.Config;
 import com.model.WordList;
@@ -25,8 +26,8 @@ public class ThirdActivity extends Activity {
 	private WordList wl;
 	private TextView words,explaination,phonetics,senExp,sentence;
 	private int index = 0;
-	private Button fight;
-	private ImageButton back;
+	private Button fight,review;
+	private ImageButton back,add;
 	private ProgressDialog  progressDialog;
 	
 
@@ -47,10 +48,29 @@ public class ThirdActivity extends Activity {
 		
 		fight = (Button) this.findViewById(R.id.thirdactivity_fightstart);
 		fight.setOnClickListener(new FightBeginListener());
+		review = (Button) this.findViewById(R.id.thirdactivity_review);
+		review.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				index = 0;
+				changeWord(index);
+			}
+		});
 		wl = new FightActivity().getWordlist(1);
 		back = (ImageButton) findViewById(R.id.back);
+		add = (ImageButton) findViewById(R.id.add);
 		
 		
+		add.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				System.out.println(wl.words[index].english);
+				System.out.println(wl.words[index].chinese);
+				InsertWordActivity.insertData(SecondActivity.dbHelper.getReadableDatabase(), wl.words[index].english, wl.words[index].chinese);
+				Toast toast = Toast.makeText(ThirdActivity.this, "添加生词成功！" , 8000);
+				toast.show();
+				
+			}
+		});
 		back.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
@@ -75,8 +95,10 @@ public class ThirdActivity extends Activity {
 		
 		if(index==9){
 			fight.setVisibility(View.VISIBLE);
+			review.setVisibility(View.VISIBLE);
 		}else{
 			fight.setVisibility(View.GONE);
+			review.setVisibility(View.GONE);
 		}
 	}
 

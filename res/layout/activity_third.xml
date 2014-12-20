@@ -126,7 +126,22 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
-            android:onClick="select" />
+            android:onClick="select" >
+
+            <Button
+                android:id="@+id/thirdactivity_review"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_fight_choice"
+                android:text="再学一遍"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rightPg"
@@ -137,17 +152,16 @@
 
             <Button
                 android:id="@+id/thirdactivity_fightstart"
-                android:layout_width="fill_parent"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="17dp"
-                android:layout_marginRight="16dp"
-                android:textSize="20sp"
-                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/bg_fight_choice"
-                android:visibility="gone"
-                android:text="对战开始" />
+                android:text="对战开始"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:visibility="gone" />
 
         </RelativeLayout>
 

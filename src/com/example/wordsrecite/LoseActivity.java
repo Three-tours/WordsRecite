@@ -13,7 +13,7 @@ public class LoseActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_lose);
 		
-
+		
 		new Handler().postDelayed(new Runnable() {
 			
 			public void run() {
