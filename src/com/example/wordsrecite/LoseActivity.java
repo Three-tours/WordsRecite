@@ -1,7 +1,9 @@
 package com.example.wordsrecite;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 
 public class LoseActivity extends Activity {
@@ -10,13 +12,16 @@ public class LoseActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_lose);
-	}
+		
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.lose, menu);
-		return true;
+		new Handler().postDelayed(new Runnable() {
+			
+			public void run() {
+				Intent intent = new Intent(LoseActivity.this,SecondActivity.class);
+				startActivity(intent);
+				LoseActivity.this.finish();
+			}
+		}, 2000);
 	}
 
 }

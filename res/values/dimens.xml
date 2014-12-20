@@ -15,5 +15,10 @@
     <dimen name="fight_btn_height">35dp</dimen>
     <dimen name="fight_btn_width">200dp</dimen>
     <dimen name="top">100dp</dimen>
+    <color name="titlegreen">#9DC92A</color>
+    <color name="backgreen">#D8E480</color>
+    <color name="backwhite">#FFF8D5</color>
+    <color name="textgreen">#C2D94E</color>
+    <color name="yellow">#CEDE5A</color>
 
 </resources>

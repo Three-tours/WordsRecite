@@ -4,33 +4,67 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+      <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" 
+        android:background="@color/titlegreen">
+
+        <ImageButton
+            android:id="@+id/main_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_menu_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="专属小词库"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+            
+    </RelativeLayout>
+    
+    
     <EditText
         android:id="@+id/word"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="请输入要插入单词">
+        <requestFocus />
+    </EditText>
 
     <EditText
         android:id="@+id/detail"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:hint="请输入单词释义"
         android:lines="3" />
 
     <Button
         android:id="@+id/insert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/insert" 
-        android:onClick="insertDa"/>
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_fight_choice"
+        android:onClick="insertDa"
+        android:text="@string/insert" />
 
     <EditText
         android:id="@+id/key"
+        android:layout_marginTop="20dp"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="请输入要查询单词" />
 
     <Button
         android:id="@+id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_fight_choice"
         android:text="@string/search" />
 
     <ListView

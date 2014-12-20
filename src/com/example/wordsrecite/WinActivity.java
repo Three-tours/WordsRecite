@@ -1,8 +1,9 @@
 package com.example.wordsrecite;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
+import android.os.Handler;
 
 public class WinActivity extends Activity {
 
@@ -10,13 +11,17 @@ public class WinActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_win);
+		
+		
+		new Handler().postDelayed(new Runnable() {
+			
+			public void run() {
+				Intent intent = new Intent(WinActivity.this,SecondActivity.class);
+				startActivity(intent);
+				WinActivity.this.finish();
+			}
+		}, 2000);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.win, menu);
-		return true;
-	}
 
 }

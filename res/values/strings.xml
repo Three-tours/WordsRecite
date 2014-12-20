@@ -23,13 +23,8 @@
     <string name="back2">返回</string>
     <string name="search">查询</string>
     <string name="detail">解释</string>
-    <string name="testPhonetics">[\'kæptʃə(r)]</string>
-    <string name="test">capture</string>
-    <string name="explaination">v.捕获，俘获；夺取，占领</string>
-    <string name="sentence">The whole town celebrated when two tanks were captured.</string>
-    <string name="senExp">全体居民庆祝缴获了两辆坦克。</string>
     <string name="win">You Win!</string>
-    <string name="lose">Sorry~ You lost!</string>
+    <string name="lose">You lost!</string>
     <string name="title_activity_third">ThirdActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_second">SecondActivity</string>

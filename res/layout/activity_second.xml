@@ -1,13 +1,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backwhite"
     android:orientation="vertical" >
 
     <Button
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/studybegin_height"
-        android:background="#58c5c7"
+        android:background="@color/titlegreen"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         android:text="@string/Title" />
 
     <LinearLayout
@@ -22,19 +25,13 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="@dimen/horizontal_margin"
-            android:src="@drawable/teacher" />
+            android:background="@drawable/touxiang_shape"
+            android:src="@drawable/touxiang" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/tip" />
 
             <LinearLayout
                 android:layout_width="0px"
@@ -50,7 +47,16 @@
                 android:layout_marginTop="10dp"
                 android:background="@null"
                 android:hint="@string/Signature"
-                android:textColorHint="#006600" />
+                android:textColorHint="#000000" />
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginBottom="@dimen/size" android:layout_marginTop="5dp" android:orientation="horizontal">
+            <ImageView android:id="@+id/headImg" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginLeft="@dimen/horizontal_margin" android:background="@drawable/touxiang_shape" android:src="@drawable/touxiang"/>
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="vertical">
+                <LinearLayout android:layout_width="0px" android:layout_height="0px" android:focusable="true" android:focusableInTouchMode="true"></LinearLayout>
+                <EditText android:layout_width="wrap_content" android:id="@+id/signature" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/horizontal_margin" android:layout_marginTop="10dp" android:background="@null" android:hint="">
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -70,7 +76,7 @@
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_marginBottom="@dimen/size"
-        android:background="@drawable/bg_second_duty"
+        android:background="@color/yellow"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -143,7 +149,7 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:background="@drawable/bg_second_duty"
+        android:background="@color/yellow"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -226,8 +232,8 @@
             android:id="@+id/camera"
             android:layout_width="@dimen/studybegin_height"
             android:layout_height="fill_parent"
-            android:background="@drawable/camera" />
-        
+            android:background="@drawable/ic_menu_camera" />
+
         <Button
             android:id="@+id/StudyBegin"
             android:layout_width="150dp"
@@ -239,9 +245,9 @@
 
         <ImageButton
             android:id="@+id/microphone"
-            android:layout_width="50dp"
+            android:layout_width="35dp"
             android:layout_height="fill_parent"
-            android:background="@drawable/search" />
+            android:background="@drawable/ic_menu_edit" />
     </LinearLayout>
 
 </LinearLayout>

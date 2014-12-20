@@ -2,21 +2,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:background="@drawable/titlebg"
+	android:background="@drawable/planb_back"
     tools:context=".StartActivity" >
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="27dp"
-        android:layout_marginTop="102dp"
-        android:text="天天背单词"
-        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="129dp"
         android:gravity="left|center_vertical"
+        android:text="天天背单词"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffcfff"
         android:textSize="40sp" />
 
 </RelativeLayout>

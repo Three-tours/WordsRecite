@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.message.Config;
@@ -22,10 +23,10 @@ import com.model.WordList;
 public class ThirdActivity extends Activity {
 
 	private WordList wl;
-	private TextView words;
-	private TextView explaination;
+	private TextView words,explaination,phonetics,senExp,sentence;
 	private int index = 0;
 	private Button fight;
+	private ImageButton back;
 	private ProgressDialog  progressDialog;
 	
 
@@ -40,10 +41,24 @@ public class ThirdActivity extends Activity {
 		// 得到各种组件
 		words = (TextView) this.findViewById(R.id.words);
 		explaination = (TextView) this.findViewById(R.id.explaination);
+		senExp = (TextView) this.findViewById(R.id.senExp);
+		sentence = (TextView) this.findViewById(R.id.sentence);
+		phonetics = (TextView) this.findViewById(R.id.phonetics);
+		
 		fight = (Button) this.findViewById(R.id.thirdactivity_fightstart);
 		fight.setOnClickListener(new FightBeginListener());
 		wl = new FightActivity().getWordlist(1);
-
+		back = (ImageButton) findViewById(R.id.back);
+		
+		
+		back.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				Intent intent = new Intent(ThirdActivity.this,SecondActivity.class);
+				startActivity(intent);
+				ThirdActivity.this.finish();
+			}
+		});
 		// 设置初始内容
 		this.changeWord(index);
 
@@ -54,6 +69,9 @@ public class ThirdActivity extends Activity {
 	private void changeWord(int index) {
 		words.setText(wl.words[index].english);
 		explaination.setText(wl.words[index].chinese);
+		senExp.setText(wl.words[index].sentenceExp);
+		sentence.setText(wl.words[index].sentence);
+		phonetics.setText(wl.words[index].phonetics);
 		
 		if(index==9){
 			fight.setVisibility(View.VISIBLE);

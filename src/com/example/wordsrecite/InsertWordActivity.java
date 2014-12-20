@@ -15,23 +15,36 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main extends Activity 
+public class InsertWordActivity extends Activity 
 {
 	MyDatabaseHelper dbHelper;
 	
 	Button insert = null;
 	Button search = null;
 	TextView test;
+	ImageButton back;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);		
+		back = (ImageButton) findViewById(R.id.main_back);
+		back.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				Intent intent = new Intent(InsertWordActivity.this,SecondActivity.class);
+				startActivity(intent);
+				InsertWordActivity.this.finish();
+			}
+		});
+		
 		// 创建MyDatabaseHelper对象，指定数据库版本为1，此处使用相对路径即可，
 		// 数据库文件自动会保存在程序的数据文件夹的databases目录下。
 		dbHelper = new MyDatabaseHelper(this 
@@ -55,8 +68,8 @@ public class Main extends Activity
 				//显示提示信息
 //				Toast.makeText(Dict.this, "添加生词成功！" , 8000)
 //					.show();
-				Toast toast = Toast.makeText(Main.this, "添加生词成功！" , 8000);
-				ImageView imageView = new ImageView(Main.this);
+				Toast toast = Toast.makeText(InsertWordActivity.this, "添加生词成功！" , 8000);
+				ImageView imageView = new ImageView(InsertWordActivity.this);
 				imageView.setImageResource(R.drawable.v);
 				LinearLayout toastView = (LinearLayout)toast.getView();
 				toastView.setOrientation(LinearLayout.HORIZONTAL);
@@ -84,7 +97,7 @@ public class Main extends Activity
 				Bundle data = new Bundle();
 				data.putSerializable("data", converCursorToList(cursor));
 				//创建一个Intent
-				Intent intent = new Intent(Main.this
+				Intent intent = new Intent(InsertWordActivity.this
 					, ResultActivity.class);
 				intent.putExtras(data);
 				

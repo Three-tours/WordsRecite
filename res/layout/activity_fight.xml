@@ -11,7 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="#58a5ff"
+        android:background="@color/titlegreen"
         android:gravity="center_horizontal|center_vertical"
         android:text="对战答题"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -22,7 +22,9 @@
         android:id="@+id/fight_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/fight_actionbar" >
 
     <Button

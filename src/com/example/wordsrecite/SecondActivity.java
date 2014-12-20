@@ -44,7 +44,7 @@ public class SecondActivity extends Activity {
 		public void onClick(View source) {
 			// 跳转至查询界面
 			
-			Intent intent=new Intent(SecondActivity.this,Main.class);
+			Intent intent=new Intent(SecondActivity.this,InsertWordActivity.class);
 //			setContentView(R.layout.main);
 			startActivity(intent);
 		}

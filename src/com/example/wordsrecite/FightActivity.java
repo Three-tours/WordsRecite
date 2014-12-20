@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.message.Config;
 import com.model.Word;
+import com.model.WordBank;
 import com.model.WordList;
 
 public class FightActivity extends Activity {
@@ -129,20 +130,8 @@ public class FightActivity extends Activity {
 	}
 
 	public WordList getWordlist(int i) {
-		Word w1 = new Word("abandon", "vt.丢弃；放弃，抛弃 ", "", "");
-		Word w2 = new Word("ability", "n.能力；能耐，本领 ", "", "");
-		Word w3 = new Word("abnormal", "a.不正常的；变态的 ", "", "");
-		Word w4 = new Word("aboard", "ad.在船(车)上；上船", "", "");
-		Word w5 = new Word("abroad", "ad.(在)国外；到处", "", "");
-		Word w6 = new Word("confusion", "n.混乱；骚乱；混淆", "", "");
-		Word w7 = new Word("cruel", "adj.残忍的，残酷的", "", "");
-		Word w8 = new Word("divorce", "n.离婚，离异 vi.离婚", "", "");
-		Word w9 = new Word("dying", "a.垂死的；临终的", "", "");
-		Word w10 = new Word("brute", "n.禽兽，畜生", "", "");
-
-		Word[] words = { w1, w2, w3, w4, w5, w6, w7, w8, w9, w10 };
-		WordList wl1 = new WordList(words);
-		return wl1;
+		
+		return WordBank.getWordsList(i);
 	}
 
 	TimerTask tm = new TimerTask() {

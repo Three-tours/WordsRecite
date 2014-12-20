@@ -57,7 +57,7 @@
             android:label="@string/title_activity_my_database_helper" >
         </activity>
         <activity
-            android:name="com.example.wordsrecite.Main"
+            android:name="com.example.wordsrecite.InsertWordActivity"
             android:label="@string/title_activity_dict" >
         </activity>
     </application>
