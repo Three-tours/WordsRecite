@@ -49,15 +49,6 @@
                 android:hint="@string/Signature"
                 android:textColorHint="#000000" />
         </LinearLayout>
-        <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginBottom="@dimen/size" android:layout_marginTop="5dp" android:orientation="horizontal">
-            <ImageView android:id="@+id/headImg" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginLeft="@dimen/horizontal_margin" android:background="@drawable/touxiang_shape" android:src="@drawable/touxiang"/>
-            <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="vertical">
-                <LinearLayout android:layout_width="0px" android:layout_height="0px" android:focusable="true" android:focusableInTouchMode="true"></LinearLayout>
-                <EditText android:layout_width="wrap_content" android:id="@+id/signature" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/horizontal_margin" android:layout_marginTop="10dp" android:background="@null" android:hint="">
-                    <requestFocus />
-                </EditText>
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 
     <TextView
